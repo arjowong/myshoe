@@ -1,0 +1,65 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>Music Player</title>
+    <script>
+    //設置音樂來源檔案
+    musicSrc = new Array()
+    musicSrc[0] = "/music/01.mp3"
+    musicSrc[1] = "/music/02.mp3"
+    musicSrc[2] = "/music/03.mp3"
+    musicSrc[3] = "/music/04.mp3"
+    musicSrc[4] = "/music/05.mp3"
+    //設置音樂說明
+    musicTxt = new Array()
+    musicTxt[0] = "Ado-うっせぇわ"
+    musicTxt[1] = "Fokushi-福寿草"
+    musicTxt[2] = "yama-am321"
+    musicTxt[3] = "yama-麻痺"
+    musicTxt[4] = "YOASOBI-夜に駆ける"
+    randMusic = Math.floor(Math.random() * musicSrc.length)
+    loopSt=false
+    loopSet=""
+    
+    //點播音樂
+    function playMusic(musicChg){
+    musicArea.innerHTML="<audio autoplay " + loopSet + "><source src='"+ musicSrc[musicChg] +"' type='audio/mpeg'></audio>"
+    }
+    
+    //隨機播放音樂
+    function iniSelect(){
+    musicArea.innerHTML="<audio autoplay " + loopSet + "><source src='"+ musicSrc[randMusic] +"' type='audio/mpeg'></audio>"
+    document.musicForm.musicSelect.length=musicSrc.length
+     for(x=0;x<musicSrc.length;x++){
+      document.musicForm.musicSelect.options[x].value=musicSrc[x]
+      document.musicForm.musicSelect.options[x].text=musicTxt[x]
+     }
+    document.musicForm.musicSelect.selectedIndex=randMusic
+    }
+    
+    //是否重複播放音樂
+    function loopTurn(musicChg){
+     if(loopSt){
+      loopSt=false
+      loopSet=""
+      reMusic.src="/music/remusic_n.gif"
+     }else{
+      loopSt=true
+      loopSet="loop"
+      reMusic.src="/music/remusic_t.gif"
+     }
+    playMusic(musicChg)
+    }
+    </script></head>
+    <body onLoad="iniSelect()"><center>
+    <div id="musicArea"></div>
+    <table border="0" width="200" height="28">
+    <tr><td>
+    <form name="musicForm" style="margin-bottom: 0">
+    <select name="musicSelect" onChange="playMusic(this.selectedIndex)" size="1"></select>
+    </form></td><td width="20">
+    <img id="reMusic" src="/music/remusic_n.gif" style="cursor:hand;" alt="重複播放"
+    onClick="loopTurn(document.musicForm.musicSelect.selectedIndex)"></td>
+    </tr></table>
+    </body>
+    </html>
+    

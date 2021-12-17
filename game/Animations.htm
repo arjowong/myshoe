@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animate</title>
+<link href="../Style/indexx.css" rel="stylesheet" type="text/css">
+
+<style>
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    /* [disabled]width: 50%; */
+    /* [disabled]min-width: 400px; */
+    /* [disabled]max-width: 750px; */
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+	
+html {font-family: sans-serif;}
+
+#myContainer {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  background: yellow;
+  margin: auto;
+}
+#myAnimation {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: red;
+  margin: auto;
+}
+		
+</style>
+</head>
+<body>
+
+<ul class="breadcrumb">
+<li><a href="Numberguess.htm" target="home">猜數字</a></li>
+<li><a href="canvas.htm" target="home">打磚塊</a></li>
+<li><a href="tictactoe.htm" target="home">井字過三關</a></li>
+<li><a href="Animations.htm" target="home">Animate</a></li>
+<li><a href="2048.htm" target="home">2048</a></li>
+</ul>
+
+<div id ="myContainer">
+<div id ="myAnimation"></div>
+</div>
+
+<p>
+<button onclick="myMove()">Click Me</button> 
+</p>
+	
+<script>
+var id = null;
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 220) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+	
+	
+</body>
+</html>

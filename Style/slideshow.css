@@ -1,0 +1,99 @@
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .Slideshow-container {
+    position: relative;
+	width: 100%;
+	align-content: left;
+  }
+  
+  /* Hide the images by default */
+  .Slideshow-mySlides {
+    display: none;
+  }
+
+  .Slideshow-block {
+    display:block;
+}
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .Slideshow-cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .Slideshow-prev, .Slideshow-next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: rgb(133, 124, 124);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .Slideshow-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .Slideshow-prev:hover,
+  .Slideshow-next:hover {
+    background-color: rgba(53, 51, 51, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .Slideshow-numbertext {
+    color: #363232;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .Slideshow-caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .Slideshow-row:after {
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .Slideshow-column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .Slideshow-demo {
+    opacity: 0.6;
+  }
+  
+  .Slideshow-active,
+  .Slideshow-demo:hover {
+    opacity: 1;
+  }
+
+  .slideshow-main {
+    padding: 16px;
+    margin-top: 30px;
+  }

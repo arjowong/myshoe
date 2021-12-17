@@ -1,0 +1,32 @@
+body {
+    background-color: #333;
+}
+#container {
+    width: 1200px;
+}
+#container #header {
+    height: 100px;
+
+}
+#container #button {
+    width: 150px;
+    height: 600px;
+    float: left;
+}
+#container #home {
+    width: 750px;
+    height: 600px;
+    float: left;
+}
+#container #video_music {
+    width: 300px;
+    height: 600px;
+    float: right;
+}
+#container #marquee {
+    height: 100px;
+    clear: left;
+}
+#container #footer {
+    height: 100px;
+}

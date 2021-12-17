@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>navbar</title>
+	
+<link rel="stylesheet" type="text/css" href="../Style/navbar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+</head>
+
+<body>
+
+<!-- = = = = = = = = = = Navbar = = = = = = = = = = -->
+    <div class="navbar" >
+        <a class="active" href="autoslide.htm" target="home"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="../Products.html" target="home"><i class="fa fa-fw fa-fire"></i>Products</a>
+        <a href="../contact.htm" target="home"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+		
+		<div class="dropdown">
+			<button class="dropbtn" "navbar">
+			<i class="fa fa-fw fa-user"></i>Member
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="../Login.html" target="home">Login</a>
+            <a href="../Register.htm" target="home">Register</a>
+            </div>
+          </div> 
+        
+
+<!-- = = = = = = = = = = Search Bar = = = = = = = = = = -->
+        <div class="search-container" "navbar">
+            <form action="/ComingSoonPage.htm" target="_blank">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+
+<!-- = = = = = = = = = = SlideShow = = = = = = = = = = -->
+	
+<div id="home"><iframe src="autoslide.htm" name="home" width=100% height=500px frameborder="0"></iframe></div>
+		
+</body>
+</html>
