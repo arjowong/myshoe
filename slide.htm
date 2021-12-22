@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Slide</title>
+<link rel="stylesheet" type="text/css" href="Style/slideshow.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- = = = = = = = = = = SlideShow = = = = = = = = = = -->
+<div class="slideshow-main" style="align-content: center">
+    
+<div class="Slideshow-container">
+  <div class="Slideshow-mySlides">
+    <div class="Slideshow-numbertext">1 / 6</div>
+    <img src="Image/A05FW727_32_big.jpg" style="width:100%">
+  </div>
+
+  <div class="Slideshow-mySlides">
+    <div class="Slideshow-numbertext">2 / 6</div>
+    <img src="Image/A05FW727_34_big.jpg" style="width:100%">
+  </div>
+
+  <div class="Slideshow-mySlides">
+    <div class="Slideshow-numbertext">3 / 6</div>
+    <img src="Image/A06FW738_8_big.jpg" style="width:100%">
+  </div>
+    
+  <div class="Slideshow-mySlides">
+    <div class="Slideshow-numbertext">4 / 6</div>
+    <img src="Image/A06FW738_14_big.jpg" style="width:100%">
+  </div>
+
+  <div class="Slideshow-mySlides">
+    <div class="Slideshow-numbertext">5 / 6</div>
+    <img src="Image/A08FW731_007_big.jpg" style="width:100%">
+  </div>
+    
+  <div class="Slideshow-mySlides">
+    <div class="Slideshow-numbertext">6 / 6</div>
+    <img src="Image/A08FW731_001_big.jpg" style="width:100%">
+  </div>
+    
+  <a class="Slideshow-prev" onclick="plusSlides(-1)">❮</a>
+  <a class="Slideshow-next" onclick="plusSlides(1)">❯</a>
+
+  <div class="Slideshow-caption-container">
+    <p id="Slideshow-caption"></p>
+  </div>
+
+  <div class="Slideshow-row">
+    <div class="Slideshow-column">
+      <img class="Slideshow-demo Slideshow-cursor" src="Image/A05FW727_32_s.jpg" style="width:99%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="Slideshow-column">
+      <img class="Slideshow-demo Slideshow-cursor" src="Image/A05FW727_34_s.jpg" style="width:99%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="Slideshow-column">
+      <img class="Slideshow-demo Slideshow-cursor" src="Image/A06FW738_8_s.jpg" style="width:99%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="Slideshow-column">
+      <img class="Slideshow-demo Slideshow-cursor" src="Image/A06FW738_14_s.jpg" style="width:99%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="Slideshow-column">
+      <img class="Slideshow-demo Slideshow-cursor" src="Image/A08FW731_8_s.jpg" style="width:99%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="Slideshow-column">
+      <img class="Slideshow-demo Slideshow-cursor" src="Image/A08FW731_1_s.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+</div>
+
+
+	
+	
+      <script>var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // 點擊"<" ">"時，可以改變slide index
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // 最下方的dot，點擊切換slide
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("Slideshow-mySlides");
+          var dots = document.getElementsByClassName("Slideshow-demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }</script>
+</body>
+</html>

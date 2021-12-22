@@ -4,11 +4,11 @@
     <script>
     //設置音樂來源檔案
     musicSrc = new Array()
-    musicSrc[0] = "/music/01.mp3"
-    musicSrc[1] = "/music/02.mp3"
-    musicSrc[2] = "/music/03.mp3"
-    musicSrc[3] = "/music/04.mp3"
-    musicSrc[4] = "/music/05.mp3"
+    musicSrc[0] = "music/01.mp3"
+    musicSrc[1] = "music/02.mp3"
+    musicSrc[2] = "music/03.mp3"
+    musicSrc[3] = "music/04.mp3"
+    musicSrc[4] = "music/05.mp3"
     //設置音樂說明
     musicTxt = new Array()
     musicTxt[0] = "Ado-うっせぇわ"
@@ -41,11 +41,11 @@
      if(loopSt){
       loopSt=false
       loopSet=""
-      reMusic.src="/music/remusic_n.gif"
+      reMusic.src="music/remusic_n.gif"
      }else{
       loopSt=true
       loopSet="loop"
-      reMusic.src="/music/remusic_t.gif"
+      reMusic.src="music/remusic_t.gif"
      }
     playMusic(musicChg)
     }
@@ -57,7 +57,7 @@
     <form name="musicForm" style="margin-bottom: 0">
     <select name="musicSelect" onChange="playMusic(this.selectedIndex)" size="1"></select>
     </form></td><td width="20">
-    <img id="reMusic" src="/music/remusic_n.gif" style="cursor:hand;" alt="重複播放"
+    <img id="reMusic" src="music/remusic_n.gif" style="cursor:hand;" alt="Repeat"
     onClick="loopTurn(document.musicForm.musicSelect.selectedIndex)"></td>
     </tr></table>
     </body>
